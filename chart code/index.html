@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Economic Outlook</h2>
+        <div class="controls draggable">
+            <button id="lockButton"><i class="fas fa-lock"></i></button>
+            <label for="dataType">Select Data Type:</label>
+            <select id="dataType">
+                <option value="Real_GDP_growth">Real GDP Growth</option>
+                <option value="Inflation_rate">Inflation Rate</option>
+                <option value="Unemployment_rate">Unemployment Rate</option>
+                <option value="General_government_gross_debt_GDP">Government Gross Debt (% of GDP)</option>
+            </select>
+
+            <label for="yearSlider">Select Year:</label>
+            <input type="range" id="yearSlider" min="2015" max="2029" value="2023" step="1">
+            <span id="selectedYear">2023</span>
+
+            <div class="chart-type-container">
+                <label for="chartType">Select Chart Type:</label>
+                <select id="chartType">
+                    <option value="radial">Radial Column Chart</option>
+                    <option value="bubble">Bubble Chart</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="map" class="map-container"></div>
+        
+        <div id="chartContainer">
+            <div id="barChart" class="chart-half"></div>
+            <div id="rightChart" class="chart-half"></div>
+        </div>
+
+        <h2>Time Series Plots of Economic Outlook</h2>
+        <div id="timeSeriesControls" class="controls draggable">
+            <label for="timeSeriesDataType">Select Time Series Data Type:</label>
+            <select id="timeSeriesDataType">
+                <option value="Current_account_balance_GDP">Current Account Balance (% of GDP)</option>
+                <option value="Current_account_balance">Current Account Balance</option>
+                <option value="GDP_at_current_prices">GDP at Current Prices</option>
+                <option value="GDP_per_capita_current_prices">GDP per Capita (Current Prices)</option>
+                <option value="Inflation_rate">Inflation Rate</option>
+                <option value="Population">Population</option>
+                <option value="Real_GDP_growth">Real GDP Growth</option>
+                <option value="Unemployment_rate">Unemployment Rate</option>
+            </select>
+
+            <label for="timeSeriesChartType">Select Chart Type:</label>
+            <select id="timeSeriesChartType">
+                <option value="streamGraph">Stream Graph</option>
+                <option value="spline">Spline Chart</option>
+            </select>
+        </div>
+        <div id="timeSeriesChart"></div>
+    </div>
+
+    <h2>Combination Charts</h2>
+    <div class="controls draggable">
+        <label for="countrySelect">Select Country:</label>
+        <select id="countrySelect">
+            <option value="Australia">Australia</option>
+            <option value="China">China</option>
+            <option value="Japan">Japan</option>
+            <option value="Korea (South)">Korea (South)</option>
+            <option value="India">India</option>
+            <option value="United States">United States</option>
+            <option value="Singapore">Singapore</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="Thailand">Thailand</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Germany">Germany</option>
+        </select>
+        
+        <label for="combinationDataType">Select Data Type:</label>
+        <select id="combinationDataType">
+            <option value= "Real GDP growth, Inflation and Unemployment rate">Economic Indicators</option>
+            <option value="Government Expenditure, Revenue and Debt">Fiscal Position</option>
+            <option value="Population and GDP per capita">Population and GDP per capita</option>
+        </select>
+        
+        <div class="chart-type-container">
+            <label for="chartTypeSlider">Select Chart Type:</label>
+            <input type="range" id="chartTypeSlider" min="0" max="1" step="1" value="0" class="slider">
+            <span id="chartTypeLabel">Line</span>
+        </div>
+    </div>
+        
+    <div id="combinationChart"></div>
+    
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/streamgraph.js"></script> <!-- For stream graph -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.5.0/sql-wasm.js"></script>
+    <script src="dashboard1.js"></script>
+    <script src="dashboard2.js"></script> 
+    <script src="dashboard3.js"></script> 
+    <script src="draggable.js"></script>
+</body>
+</html>
