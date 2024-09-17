@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  z-index: 10;
+  position: relative;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#lockButton {
+  margin-right: 20px;
+}
+
+.controls label {
+  margin-right: 10px;
+}
+
+.controls select, .controls input[type="range"] {
+  margin-right: 20px;
+}
+
+.chart-type-container {
+  margin-left: 400px;
+}
+
+#chartContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 80vh; /* Adjusted height */
+}
+
+.chart-half {
+  width: 50%; /* Adjusted width */
+  height: 100%; /* Adjusted height */
+}
+
+.map-container {
+  width: 100%;
+  height: 70vh; /* Adjusted height */
+  margin-top: 20px; /* Reduced margin */
+}
+
+.chart-full {
+  width: 100%;
+  height: 70vh; /* Adjusted height */
+  margin-top: 20px; /* Reduced margin */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+#timeSeriesChart {
+  width: 100%;
+  height: 80vh; /* Adjusted height */
+}
+
+#combinationChart {
+  width: 100%;
+  height: 80vh; /* Adjusted height */
+  margin-top: 20px; /* Reduced margin */
+}
+
+#chartTypeSlider {
+  width: 50px;
+  margin-left: 10px;
+}
+
+#sunburstChart {
+  width: 100%;
+  height: 70vh; /* Adjusted height */
+  margin: 0 auto;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-labels span {
+  flex: 1;
+  text-align: center;
+}
+
+.slider {
+  flex: 2;
+  margin: 0 10px;
+}
+
+h2 {
+  margin-top: 20px; /* Consistent margin for headings */
+  margin-bottom: 10px; /* Consistent margin for headings */
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #333; /* Thinner line below the title */
+}
+
+
